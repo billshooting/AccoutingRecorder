@@ -1,0 +1,19 @@
+.navigator-button.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    width: 50px;
+    cursor: pointer;
+}
+.navigator-button.flex-container.selected {
+    color: #000;
+}
+
+.navigator-icon {
+    flex: 2;
+}
+.navigation-name {
+    flex: 1;
+}
