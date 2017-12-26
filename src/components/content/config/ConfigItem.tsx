@@ -2,7 +2,8 @@ import * as React from 'react';
 
 interface IConfigItemProps {
     text: string;
-    onNavigate: null | ((target: string) => void);
+    value: string;
+    onNavigate: null | (() => void);
 }
 
 class ConfigItem extends React.Component<IConfigItemProps, object> {
@@ -13,13 +14,19 @@ class ConfigItem extends React.Component<IConfigItemProps, object> {
 
     public handleClick() {
         if (this.props.onNavigate !== null) {
-            this.props.onNavigate(this.props.text);
+            this.props.onNavigate();
         }
     }
     public render() {
+        let value = null;
+        if (this.props.value) {
+            value = <span className="item-text">{this.props.value}</span>;          
+        }
         return (
             <div className="config-item" onClick={this.handleClick}>
                 <span className="item-text">{this.props.text}</span>
+                <span className="item-value">{value}</span>
+                <span className="glyphicon glyphicon-menu-right item-arrow" />
             </div>
         );
     }

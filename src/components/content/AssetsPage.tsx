@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface IAssetsPageProps {
-    name: string;
+    location: { pathname: string };
 }
 
 class AssetsPage extends React.Component<IAssetsPageProps, object> {
@@ -10,9 +10,11 @@ class AssetsPage extends React.Component<IAssetsPageProps, object> {
     }
 
     public render() {
+        const path = this.props.location.pathname;
+        const name = path.split('/')[1];
         return (
         <div id="app-content" className="flex-container">
-            {this.props.name}
+            {name}
         </div>
         );
     }

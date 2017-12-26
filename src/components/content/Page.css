@@ -1,0 +1,43 @@
+#config-container {
+    font-size: 1.1em;
+}
+
+.config-title {
+    color: #555;
+    background: #ccc;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1em;
+    padding: 0 15px 0 15px;
+}
+
+.config-item {
+    position: relative;
+    margin: 0 10px 0 10px;
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    transition: 0.5s linear;
+}
+.config-item:hover {
+    background-color: #ccc
+}
+
+.item-text {
+    margin: 0 5px 0 5px;
+}
+.item-value {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    font-size: 1em;
+    color: #ccc;
+}
+.glyphicon.glyphicon-menu-right.item-arrow {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 10px 0 10px 0;
+    color: #ccc;
+}

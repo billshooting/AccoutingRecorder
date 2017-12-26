@@ -6,7 +6,6 @@ interface INavigatorPros {
     friendlyName: string;
     glyphicon: string;
     selected: boolean;
-    onNavigate: (t: string) => void;
 }
 
 class Navigator extends React.Component<INavigatorPros, object> {
@@ -16,7 +15,7 @@ class Navigator extends React.Component<INavigatorPros, object> {
     }
 
     public handlerClick() {
-        this.props.onNavigate(this.props.name);
+        return null;
     }
 
     public render() {

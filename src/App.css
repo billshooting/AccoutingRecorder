@@ -13,13 +13,16 @@
   height: 40px;
   padding: 0 5px 0 5px;
   font-size: 1.5em;
-  background: #ddd;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
 }
 .header-icon {
   display: inline-block;
   width: 40px;
   height: 40px;
   border: 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 .header-text {
   display: inline-block;
@@ -36,14 +39,3 @@
   height: 100%;
 }
 
-#app-navigation {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border-top: 1px solid #ccc;
-  color: #999;
-}

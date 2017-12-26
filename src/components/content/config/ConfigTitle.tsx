@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface IConfigTitleProps {
-
+    text: string;
 }
 
 class ConfigTitle extends React.Component<IConfigTitleProps, object> {
@@ -10,7 +10,11 @@ class ConfigTitle extends React.Component<IConfigTitleProps, object> {
     }
 
     public render() {
-        return null;
+        return (
+            <div className="config-title">
+                <span>{this.props.text}</span>
+            </div>
+        );
     }
 }
 
