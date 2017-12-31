@@ -1,13 +1,13 @@
 #config-container {
-    font-size: 1.1em;
+    font-size: 1.0em;
 }
 
 .config-title {
     color: #555;
-    background: #ccc;
+    background: #ddd;
     height: 25px;
     line-height: 25px;
-    font-size: 1em;
+    font-size: 0.9em;
     padding: 0 15px 0 15px;
 }
 
@@ -20,6 +20,15 @@
     background-color: #fff;
     transition: 0.5s linear;
 }
+.config-item-last {
+    position: relative;
+    margin: 0 10px 0 10px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    transition: 0.5s linear;
+}
+
 .config-item:hover {
     background-color: #ccc
 }
@@ -34,7 +43,7 @@
     font-size: 1em;
     color: #ccc;
 }
-.glyphicon.glyphicon-menu-right.item-arrow {
+.glyphicon.item-right {
     display: inline-block;
     position: absolute;
     right: 0;

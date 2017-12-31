@@ -5,7 +5,7 @@ import Header from '../components/header/Header';
 const mapStateToProps = (state: any) => {
     const l: H.Location = state.route.location;
     return {
-        location: l
+        location: l,
     };
 };
 

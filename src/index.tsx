@@ -6,12 +6,14 @@ import createHistory from 'history/createBrowserHistory';
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
 import registerServiceWorker from './registerServiceWorker';
 import App from './App';
+import currencyReducer from './reducers/config/currencyReducer';
 import './index.css';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
 const store = createStore(
   combineReducers({
+    currency: currencyReducer,
     route: routerReducer
   }),
   applyMiddleware(middleware)

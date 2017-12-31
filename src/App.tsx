@@ -22,13 +22,13 @@ class App extends React.Component<IAppProps, IAppState> {
     }
 
     public componentWillReceiveProps(newProps: IAppProps) {
-        console.log(newProps.location);
+        console.log('Call App component will receive props');
     }
     public render() {
         return (
             <div id="app">
                 <ConnectedHeader />
-                <Page location={this.props.location} />
+                <Page />
                 <ConnectedFooter />
             </div>
         );

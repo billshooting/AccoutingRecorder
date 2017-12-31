@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { Switch, Route, } from 'react-router-dom';
-import * as History from 'history';
 import AssetsPage from './AssetsPage';
 import BillsPage from './BillsPage';
 import ConfigPage from './ConfigPage';
 import MinePage from './MinePage';
 
 interface IPageProps {
-    location: History.Location;
+    // location: History.Location;
 }
 
 class Page extends React.Component<IPageProps, object> {

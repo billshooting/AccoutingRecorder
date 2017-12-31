@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dispatch } from 'react-redux';
+import { goBack } from 'react-router-redux';
 import * as History from 'history';
-import {  } from 'react-router-dom';
 
 interface IHeaderProps {
     location: History.Location;
@@ -24,7 +24,7 @@ class Header extends React.Component<IHeaderProps, object> {
         const friendlyHeaderText = headerText[mainPath];
         return (
             <div id="app-header" className="flex-container">
-                <button className="header-icon">
+                <button className="header-icon" onClick={() => this.props.dispatch(goBack())} >
                     <span className="glyphicon glyphicon-menu-left" />
                 </button>
                 <div className="header-text">
