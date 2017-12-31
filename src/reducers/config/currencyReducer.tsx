@@ -1,12 +1,9 @@
-const INIT_VALUE = {
-    currency: 'RMB'
-};
+import { CHANGE_CURR_TYPE } from '../../actions/config/changeCurrency';
+const INIT_STATE = 'RMB';
 
-const CURR_TYPE = 'CHANGE_CURR';
-
-const currencyReducer = (state = INIT_VALUE, action: any) => {
+const currencyReducer = (state = INIT_STATE, action: any) => {
     switch (action.type) {
-        case CURR_TYPE: return Object.assign({}, state, { currency: action.value });
+        case CHANGE_CURR_TYPE: return action.currency;
         default: return state;
     }
 };

@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
-import SelectCurrencyItem from './SelectCurrencyItem';
-import changeCurrency from '../../../actions/config/changeCurrency';
+import CurrencyItem from './SelectionItem';
+import { changeCurrency } from '../../../actions/config/changeCurrency';
 
-interface ISelectCurrencyProps {
+interface ICurrencyProps {
     currency: string;
     dispatch: Dispatch<any>;
 }
 
-class SelectCurrency extends React.Component<ISelectCurrencyProps, object> {
-    public constructor(props: ISelectCurrencyProps) {
+class Currency extends React.Component<ICurrencyProps, object> {
+    public constructor(props: ICurrencyProps) {
         super(props);
     }
 
@@ -17,18 +17,18 @@ class SelectCurrency extends React.Component<ISelectCurrencyProps, object> {
         const value = this.props.currency || '';
         const dispatch = this.props.dispatch;
         return (
-            <div id="config-container" className="flex-container app-content">
-                <SelectCurrencyItem 
+            <div>
+                <CurrencyItem 
                     text="人民币 RMB" 
                     isSelected={value.includes('RMB')} 
                     onSelect={() => dispatch(changeCurrency('RMB'))} 
                 />
-                <SelectCurrencyItem 
+                <CurrencyItem 
                     text="港 币 HKD" 
                     isSelected={value.includes('HKD')} 
                     onSelect={() => dispatch(changeCurrency('HKD'))} 
                 />
-                <SelectCurrencyItem 
+                <CurrencyItem 
                     text="美 元 USD" 
                     isSelected={value.includes('USD')}
                     onSelect={() => dispatch(changeCurrency('USD'))}
@@ -39,10 +39,10 @@ class SelectCurrency extends React.Component<ISelectCurrencyProps, object> {
 }
 const mapStateToProps = (state: any) => {
     return {
-        currency: state.currency.currency
+        currency: state.config.currency,
     };
 };
 
-const ConnectedSelectCurrency = connect(mapStateToProps)(SelectCurrency);
+const ConnectedCurrency = connect(mapStateToProps)(Currency);
 
-export default ConnectedSelectCurrency;
+export default ConnectedCurrency;

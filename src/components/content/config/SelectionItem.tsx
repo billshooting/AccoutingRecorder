@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-interface ISelectCurrencyItemProps {
+interface ICurrencyItemProps {
     text: string;
     isSelected: boolean;
     onSelect: null | (() => void);
 }
 
-class SelectCurrencyItem extends React.Component<ISelectCurrencyItemProps, object> {
-    public constructor(props: ISelectCurrencyItemProps) {
+class SelectionItem extends React.Component<ICurrencyItemProps, object> {
+    public constructor(props: ICurrencyItemProps) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
     }
@@ -20,7 +20,7 @@ class SelectCurrencyItem extends React.Component<ISelectCurrencyItemProps, objec
     public render() {
         let iconOk = null;
         if (this.props.isSelected) {
-            iconOk = <span style={{color: 'green'}} className="glyphicon glyphicon-ok item-right" />;
+            iconOk = <span style={{color: '#4CAF50'}} className="glyphicon glyphicon-ok item-right" />;
         }
         return (
             <div className="config-item" onClick={this.handleClick}>
@@ -31,4 +31,4 @@ class SelectCurrencyItem extends React.Component<ISelectCurrencyItemProps, objec
     }
 }
 
-export default SelectCurrencyItem;
+export default SelectionItem;

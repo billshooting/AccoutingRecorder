@@ -28,7 +28,7 @@ class ConfigItem extends React.Component<IConfigItemProps, object> {
             <div className={this.props.isLast ? 'config-item-last' : 'config-item'} onClick={this.handleClick}>
                 <span className="item-text">{this.props.text}</span>
                 <span className="item-value">{value}</span>
-                <span className="glyphicon glyphicon-menu-right item-arrow" />
+                <span className="glyphicon glyphicon-menu-right item-right" />
             </div>
         );
     }
