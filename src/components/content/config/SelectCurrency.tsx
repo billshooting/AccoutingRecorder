@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
-import SelectCurrencyItem from './ConfigCurrencyItem';
+import SelectCurrencyItem from './SelectCurrencyItem';
 import changeCurrency from '../../../actions/config/changeCurrency';
 
 interface ISelectCurrencyProps {
