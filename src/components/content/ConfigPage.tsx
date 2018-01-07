@@ -5,7 +5,7 @@ import ConnectedCurrency from './config/Currency';
 import ConnectedFxRate from './config/FxRate';
 import ConnectedBrokerage from './config/Brokerage';
 import BalanceColor from './config/BalanceColor';
-import './Page.css';
+import './config/Configuration.css';
 
 interface IConfigPageProps {
 }

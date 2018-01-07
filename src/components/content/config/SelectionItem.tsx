@@ -24,7 +24,7 @@ class SelectionItem extends React.Component<ICurrencyItemProps, object> {
         }
         return (
             <div className="config-item" onClick={this.handleClick}>
-                <span className="item-text">{this.props.text}</span>
+                <span className="config-item-text">{this.props.text}</span>
                 {iconOk}
             </div>
         );

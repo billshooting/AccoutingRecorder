@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { connect, Dispatch } from 'react-redux';
+import SwitchInputItem from './SwitchInputItem';
 
 interface IFxRateProps {
     dispatch: Dispatch<any>;
@@ -11,7 +12,11 @@ class FxRate extends React.Component<IFxRateProps, object> {
     }
 
     public render() {
-        return <div>Fx</div>;
+        return (
+            <div>
+                <SwitchInputItem />
+            </div>
+        );
     }
 }
 

@@ -1,0 +1,72 @@
+.config-title {
+    color: #555;
+    background: #ddd;
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.9em;
+    padding: 0 15px 0 15px;
+}
+
+/* ConfigItem.tsx 所用css */
+.config-item {
+    position: relative;
+    margin: 0 10px 0 10px;
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    transition: 0.5s linear;
+}
+.config-item-last {
+    position: relative;
+    margin: 0 10px 0 10px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    transition: 0.5s linear;
+}
+
+.config-item:hover {
+    background-color: #ccc
+}
+
+.config-item-text {
+    margin: 0 5px 0 5px;
+}
+.config-item-value {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    font-size: 1em;
+    color: #4CAF50;
+}
+
+.item-right {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 10px 0 10px 0;
+    color: #ccc;
+}
+.glyphicon.item-right {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 10px 0 10px 0;
+    color: #ccc;
+}
+
+/* ConfigInput 所用 css */
+.config-input {
+    padding: 0 15px 0 15px;
+    margin-bottom: 0;
+}
+
+.config-input input {
+    display: inline-block;
+    font-weight: initial;
+    width: 60%;
+}
+.config-input label {
+    max-width: 85%;
+}

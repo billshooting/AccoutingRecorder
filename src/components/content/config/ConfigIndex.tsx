@@ -4,10 +4,12 @@ import * as H from 'history';
 import { push } from 'react-router-redux';
 import ConfigItem from './ConfigItem';
 import ConfigTitle from './ConfigTitle';
+import { IBrokerageState } from '../../../types/appTypes';
 
 interface IConfigIndexProps {
     currency: string;
     balanceColor: string;
+    brokerage: IBrokerageState;
     location: H.Location;
     dispatch: Dispatch<any>;
     history: H.History;
@@ -33,6 +35,7 @@ class ConfigIndex extends React.Component<IConfigIndexProps, object> {
         const { currency, balanceColor, dispatch } = this.props;
         const curr = mapOject.currency[currency];
         const color = mapOject.balanceColor[balanceColor];
+        const brokerageAShare = `A股：${this.props.brokerage.CNEx.brokerageAShare.rate} %%`;
         return (
             <div>
                 <ConfigTitle text="记账设置" />
@@ -50,7 +53,7 @@ class ConfigIndex extends React.Component<IConfigIndexProps, object> {
                 />
                 <ConfigItem 
                     text="佣金设置" 
-                    value={''} 
+                    value={brokerageAShare} 
                     isLast={false}
                     onNavigate={() => dispatch(push('/config/brokerage'))} 
                 />
@@ -76,6 +79,7 @@ const mapStateToProps = (state: any) => {
     return {
         currency: state.config.currency,
         balanceColor: state.config.balanceColor,
+        brokerage: state.config.brokerage,
     };
 };
 
