@@ -23,7 +23,7 @@ class ConfigIndex extends React.Component<IConfigIndexProps, object> {
     public render() {
         const mapOject = {
             currency: {
-                RMB: '人民币(RMB)',
+                CNY: '人民币(CNY)',
                 HKD: '港币(HKD)',
                 USD: '美元(USD)'
             },

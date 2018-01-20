@@ -69,3 +69,20 @@ interface IBrokerageState
 }
 
 export { IBrokerageState, ICNExBrokerageState, IHKExBrokerageState, IUSExBrokerageState };
+
+interface ICurrencyRateState
+{
+    value: string;
+    isAuto: boolean;
+    isFetching: boolean;
+    lastUpdated: string | number;
+}
+
+interface IFxRateState
+{
+    CNY: ICurrencyRateState;
+    USD: ICurrencyRateState;
+    HKD: ICurrencyRateState;
+}
+
+export { ICurrencyRateState, IFxRateState };

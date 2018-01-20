@@ -19,9 +19,9 @@ class Currency extends React.Component<ICurrencyProps, object> {
         return (
             <div>
                 <CurrencyItem 
-                    text="人民币 RMB" 
-                    isSelected={value.includes('RMB')} 
-                    onSelect={() => dispatch(changeCurrency('RMB'))} 
+                    text="人民币 CNY" 
+                    isSelected={value.includes('CNY')} 
+                    onSelect={() => dispatch(changeCurrency('CNYS'))} 
                 />
                 <CurrencyItem 
                     text="港 币 HKD" 

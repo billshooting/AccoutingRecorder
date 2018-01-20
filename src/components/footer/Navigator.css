@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
-    width: 50px;
+    width: 4rem;
     cursor: pointer;
 }
 .navigator-button.flex-container.selected {

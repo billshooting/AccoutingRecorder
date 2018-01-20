@@ -4,19 +4,20 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
+// import { thunkMiddleware } from 'redux-thunk';
 import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 import configReducer from './reducers/config/configIndexReducer';
 import './index.css';
 
 const history = createHistory();
-const middleware = routerMiddleware(history);
+const routeMiddleware = routerMiddleware(history);
 const store = createStore(
   combineReducers({
     config: configReducer,
     route: routerReducer
   }),
-  applyMiddleware(middleware)
+  applyMiddleware(routeMiddleware)
 );
 
 ReactDOM.render(

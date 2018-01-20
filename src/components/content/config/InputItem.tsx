@@ -47,35 +47,31 @@ class InputItem extends React.Component<IInputItemProps, object>
         const { value, label, unit, placeholder, disable } = this.props;
         const { rate, minimum } = value;
         return (
-            <div className="form-group config-input">
-                <label>
-                    <span style={{display: 'inline-block', minWidth: '60px'}}>{label}</span>
-                    <input 
-                        value={rate}
-                        type="number" 
-                        placeholder={placeholder}
-                        className="form-control" 
-                        min="0" 
-                        step="0.1"
-                        style={{width: '80px'}}
-                        disabled={disable} 
-                        onChange={this.generateHandler('rate')} 
-                    />
-                </label>
-                <span style={{display: 'inline-block', minWidth: '40px'}}>{unit}</span>
-                <label>
-                    <span style={{display: 'inline-block', minWidth: '30px'}}>最低</span>
-                    <input
-                        value={minimum} 
-                        type="number" 
-                        placeholder="￥/$"
-                        className="form-control" 
-                        min="0" 
-                        style={{width: '60px'}} 
-                        onChange={this.generateHandler('minimum')} 
-                        disabled={disable} 
-                    />
-                </label>
+            <div className="config-input-group">
+                <span style={{ display: 'inline-block', width: '20%', minWidth: '5rem', fontWeight: 'bold' }}>{label}</span>
+                <input 
+                    value={rate}
+                    type="number" 
+                    placeholder={placeholder}
+                    className="input-beautified" 
+                    min="0" 
+                    step="0.1"
+                    style={{display: 'inline-block', width: '25%'}}
+                    disabled={disable} 
+                    onChange={this.generateHandler('rate')} 
+                />
+                <span style={{display: 'inline-block', width: '15%', minWidth: '2.5rem'}}>{unit}</span>
+                <span style={{display: 'inline-block', marginLeft: '5%', minWidth: '10%'}}>最低</span>
+                <input
+                    value={minimum} 
+                    type="number" 
+                    placeholder="￥/$"
+                    className="input-beautified" 
+                    min="0" 
+                    style={{display: 'inline-block', width: '20%'}} 
+                    onChange={this.generateHandler('minimum')} 
+                    disabled={disable} 
+                />
             </div>
         );
     }
