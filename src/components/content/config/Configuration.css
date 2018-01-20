@@ -1,27 +1,27 @@
 .config-title {
     color: #555;
     background: #ddd;
-    height: 25px;
-    line-height: 25px;
-    font-size: 0.9em;
-    padding: 0 15px 0 15px;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    padding: 0 1.4rem;
 }
 
 /* ConfigItem.tsx 所用css */
 .config-item {
     position: relative;
-    margin: 0 10px 0 10px;
+    margin: 0 1rem;
     border-bottom: 1px solid #ccc;
-    height: 40px;
-    line-height: 40px;
+    height: 3.5rem;
+    line-height: 3.5rem;
     background-color: #fff;
     transition: 0.5s linear;
 }
 .config-item-last {
     position: relative;
-    margin: 0 10px 0 10px;
-    height: 40px;
-    line-height: 40px;
+    margin: 0 1rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
     background-color: #fff;
     transition: 0.5s linear;
 }
@@ -31,13 +31,13 @@
 }
 
 .config-item-text {
-    margin: 0 5px 0 5px;
+    margin: 0 0.4rem;
 }
 .config-item-value {
     display: inline-block;
     position: absolute;
-    right: 20px;
-    font-size: 1em;
+    right: 2rem;
+    font-size: 1rem;
     color: #4CAF50;
 }
 
@@ -45,21 +45,36 @@
     display: inline-block;
     position: absolute;
     right: 0;
-    margin: 10px 0 10px 0;
     color: #ccc;
 }
 .glyphicon.item-right {
     display: inline-block;
     position: absolute;
     right: 0;
-    margin: 10px 0 10px 0;
+    margin: 1rem 0;
     color: #ccc;
 }
 
 /* ConfigInput 所用 css */
-.config-input {
-    padding: 0 15px 0 15px;
-    margin-bottom: 0;
+.config-input-group {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+}
+
+.input-beautified {
+    display: inline-block;
+    height: 3.0rem;
+    margin: 0.25rem 0;
+    padding: 0.4rem 0.8rem;
+    line-height: 3.0rem;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+}
+.input-beautified :hover {
+    border-color: #4CAF50;
 }
 
 .config-input input {
@@ -69,4 +84,10 @@
 }
 .config-input label {
     max-width: 85%;
+}
+
+label.switch-right {
+    position: absolute;
+    right: 0;
+    margin-top: 0.4rem;
 }
